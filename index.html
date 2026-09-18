@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Ouro | Agropecuaria Ouro LTDA</title>
+<meta name="description" content="Agro Ouro — Agropecuaria Ouro LTDA. Comércio varejista de produtos para animais, plantas, ferramentas e produtos veterinários em Ouro Preto - MG.">
+<style>
+:root{
+  --bg:#07130d;
+  --bg2:#0c1d14;
+  --card:#10271b;
+  --card2:#143522;
+  --green:#43b56a;
+  --green2:#79d98f;
+  --gold:#d7b45b;
+  --text:#f3f7f2;
+  --muted:#aebdb2;
+  --line:rgba(121,217,143,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(180deg,var(--bg),#091a11 55%,#06110b);
+  color:var(--text);line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(7,19,13,.88);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+.logo-mark{
+  width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--green),#1c7c43);
+  color:#06110b;font-weight:900;font-size:20px;
+  box-shadow:0 10px 30px rgba(67,181,106,.2);
+}
+.logo small{display:block;color:var(--muted);font-size:11px;font-weight:500}
+nav{display:flex;gap:24px;color:#d7e4da;font-size:14px}
+nav a:hover{color:var(--green2)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 19px;border-radius:12px;font-weight:750;font-size:14px;
+  transition:.2s ease;border:1px solid transparent;
+}
+.btn-primary{background:var(--green);color:#07130d}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-outline{border-color:rgba(121,217,143,.35);color:var(--text)}
+.btn-outline:hover{background:rgba(67,181,106,.08)}
+.hero{padding:100px 0 85px;position:relative;overflow:hidden}
+.hero:before{
+  content:"";position:absolute;width:600px;height:600px;right:-250px;top:-250px;
+  background:radial-gradient(circle,rgba(67,181,106,.18),transparent 68%);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;
+  border:1px solid rgba(121,217,143,.25);background:rgba(67,181,106,.08);
+  color:var(--green2);font-size:12px;font-weight:750;margin-bottom:20px
+}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-2.5px;margin-bottom:22px}
+h1 span{color:var(--green2)}
+.hero p{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{
+  border:1px solid var(--line);background:linear-gradient(145deg,rgba(20,53,34,.9),rgba(9,28,18,.92));
+  border-radius:26px;padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.25)
+}
+.status{display:flex;align-items:center;gap:9px;color:#bfeec9;font-size:13px;margin-bottom:25px}
+.dot{width:9px;height:9px;background:#52d67b;border-radius:50%;box-shadow:0 0 0 5px rgba(82,214,123,.12)}
+.hero-card h3{font-size:24px;margin-bottom:8px}
+.hero-card p{font-size:14px;margin:0 0 22px}
+.info-row{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}
+.info-row:last-child{border-bottom:0}
+.info-row span:first-child{color:var(--muted)}
+section{padding:82px 0}
+.section-head{max-width:720px;margin-bottom:38px}
+.eyebrow{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800;margin-bottom:10px}
+h2{font-size:clamp(30px,4vw,45px);line-height:1.12;margin-bottom:12px;letter-spacing:-1px}
+.section-head p{color:var(--muted)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:linear-gradient(145deg,rgba(16,39,27,.9),rgba(10,27,17,.9));
+  border:1px solid var(--line);border-radius:20px;padding:25px
+}
+.icon{
+  width:45px;height:45px;border-radius:13px;display:grid;place-items:center;
+  background:rgba(67,181,106,.11);border:1px solid rgba(121,217,143,.18);
+  color:var(--green2);font-size:21px;margin-bottom:17px
+}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{font-size:14px;color:var(--muted)}
+.cnaes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cnae{
+  padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(16,39,27,.55)
+}
+.cnae strong{display:block;color:var(--green2);font-size:14px;margin-bottom:5px}
+.cnae span{font-size:13px;color:#d0dbd3}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.panel{
+  background:rgba(12,29,20,.72);border:1px solid var(--line);border-radius:22px;padding:27px
+}
+.panel h3{margin-bottom:18px}
+.details{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.detail{padding:15px;border-radius:14px;background:rgba(67,181,106,.045);border:1px solid rgba(121,217,143,.1)}
+.detail label{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.detail b{font-size:14px}
+.contact{
+  border-radius:28px;padding:45px;
+  background:linear-gradient(135deg,#143d25,#0b2115);
+  border:1px solid rgba(121,217,143,.2);
+  display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center
+}
+.contact p{color:var(--muted);margin-top:8px}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:850px){
+  nav{display:none}
+  .hero-grid,.about{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .cnaes{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr;padding:30px}
+  .contact-actions{justify-content:flex-start}
+}
+@media(max-width:520px){
+  .nav{height:68px}
+  .hero{padding:70px 0 55px}
+  h1{letter-spacing:-1.7px}
+  .details{grid-template-columns:1fr}
+  section{padding:62px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="logo">
+      <div class="logo-mark">AO</div>
+      <div>Agro Ouro<small>Agropecuaria Ouro LTDA</small></div>
+    </a>
+    <nav>
+      <a href="#empresa">Empresa</a>
+      <a href="#atividades">Atividades</a>
+      <a href="#registro">Registro</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=5531989801853" target="_blank">Falar conosco</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">● EMPRESA ATIVA · OURO PRETO / MG</div>
+      <h1>Agro <span>Ouro</span></h1>
+      <p>Agropecuaria Ouro LTDA — comércio e atendimento voltados ao segmento agropecuário, produtos para animais, itens para jardinagem, ferramentas e produtos veterinários.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=5531989801853" target="_blank">Entrar em contato</a>
+        <a class="btn btn-outline" href="https://www.google.com.br/maps/search/Rua%20Geraldo%20Laercio%20458%20Tavares%20Ouro%20Preto%20MG" target="_blank">Ver localização</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="status"><span class="dot"></span> Situação cadastral: Ativa</div>
+      <h3>Dados da empresa</h3>
+      <p>Informações cadastrais e comerciais da matriz.</p>
+      <div class="info-row"><span>CNPJ</span><b>35.435.430/0001-10</b></div>
+      <div class="info-row"><span>Razão Social</span><b>Agropecuaria Ouro LTDA</b></div>
+      <div class="info-row"><span>Abertura</span><b>06/11/2019</b></div>
+      <div class="info-row"><span>Porte</span><b>Micro Empresa</b></div>
+      <div class="info-row"><span>Capital Social</span><b>R$ 30.000,00</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="empresa">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Sobre a Agro Ouro</div>
+      <h2>Presença local com atuação diversificada</h2>
+      <p>Uma apresentação institucional da empresa, baseada nas informações cadastrais fornecidas.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="icon">🐾</div><h3>Produtos para animais</h3><p>Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação.</p></div>
+      <div class="card"><div class="icon">🌱</div><h3>Plantas e flores</h3><p>Atuação no comércio varejista de plantas e flores naturais.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>Ferragens e ferramentas</h3><p>Oferta de itens de ferragens e ferramentas para diferentes necessidades.</p></div>
+      <div class="card"><div class="icon">💊</div><h3>Produtos veterinários</h3><p>Comércio varejista de medicamentos veterinários, conforme atividade cadastrada.</p></div>
+      <div class="card"><div class="icon">🎣</div><h3>Pesca e camping</h3><p>Comércio de artigos de caça, pesca e camping.</p></div>
+      <div class="card"><div class="icon">🧴</div><h3>Produtos diversos</h3><p>Também possui atividades cadastradas para saneantes, vestuário, calçados e outros itens.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="atividades">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Atividades · CNAEs</div>
+      <h2>Atuação registrada</h2>
+      <p>Principais atividades econômicas informadas para a empresa.</p>
+    </div>
+    <div class="cnaes">
+      <div class="cnae"><strong>47.89-0-04 · Principal</strong><span>Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação</span></div>
+      <div class="cnae"><strong>47.81-4-00</strong><span>Comércio varejista de artigos do vestuário e acessórios</span></div>
+      <div class="cnae"><strong>47.89-0-02</strong><span>Comércio varejista de plantas e flores naturais</span></div>
+      <div class="cnae"><strong>47.89-0-05</strong><span>Comércio varejista de produtos saneantes domissanitários</span></div>
+      <div class="cnae"><strong>47.44-0-01</strong><span>Comércio varejista de ferragens e ferramentas</span></div>
+      <div class="cnae"><strong>47.82-2-01</strong><span>Comércio varejista de calçados</span></div>
+      <div class="cnae"><strong>47.63-6-04</strong><span>Comércio varejista de artigos de caça, pesca e camping</span></div>
+      <div class="cnae"><strong>47.71-7-04</strong><span>Comércio varejista de medicamentos veterinários</span></div>
+      <div class="cnae"><strong>46.23-1-09</strong><span>Comércio atacadista de alimentos para animais</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="registro">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Informações de registro</div>
+      <h2>Dados cadastrais</h2>
+    </div>
+    <div class="about">
+      <div class="panel">
+        <h3>Identificação</h3>
+        <div class="details">
+          <div class="detail"><label>CNPJ</label><b>35.435.430/0001-10</b></div>
+          <div class="detail"><label>Inscrição Estadual MG</label><b>003591090.00-30</b></div>
+          <div class="detail"><label>Razão Social</label><b>Agropecuaria Ouro LTDA</b></div>
+          <div class="detail"><label>Nome Fantasia</label><b>Agro Ouro</b></div>
+          <div class="detail"><label>Natureza Jurídica</label><b>Sociedade Empresária Limitada</b></div>
+          <div class="detail"><label>Tipo</label><b>Matriz</b></div>
+          <div class="detail"><label>Simples Nacional</label><b>Sim — desde 06/11/2019</b></div>
+          <div class="detail"><label>MEI</label><b>Não</b></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Endereço</h3>
+        <div class="detail" style="margin-bottom:14px">
+          <label>Localização</label>
+          <b>Rua Geraldo Laercio, 458<br>Tavares · Ouro Preto / MG<br>CEP 35402-443</b>
+        </div>
+        <a class="btn btn-outline" href="https://www.google.com.br/maps/search/Rua%20Geraldo%20Laercio%20458%20Tavares%20Ouro%20Preto%20MG" target="_blank">Abrir no Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="contact">
+      <div>
+        <div class="eyebrow">Contato</div>
+        <h2>Agro Ouro</h2>
+        <p>Rua Geraldo Laercio, 458 · Tavares · Ouro Preto / MG · CEP 35402-443</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=5531989801853" target="_blank">WhatsApp</a>
+        <a class="btn btn-outline" href="mailto:agro.ouro@outlook.com">Enviar e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><b>Agro Ouro</b> · Agropecuaria Ouro LTDA</div>
+    <div>CNPJ 35.435.430/0001-10 · Ouro Preto / MG</div>
+  </div>
+</footer>
+</body>
+</html>
